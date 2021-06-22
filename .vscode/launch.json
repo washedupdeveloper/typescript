@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug with TS-Node",
+      "type": "pwa-node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/", "node_modules/"],
+      "cwd": "${workspaceFolder}",
+      "args": ["${relativeFile}"],
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "sourceMaps": true,
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

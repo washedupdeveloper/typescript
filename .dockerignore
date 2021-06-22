@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Except..
+!./src
+!./package.json
+!./yarn.lock
+!./tsconfig.json
+!./.yarnrc.yml
+!./.yarn/plugins
+!./.yarn/releases

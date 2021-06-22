@@ -1,0 +1,53 @@
+{
+	"name": "typescript-template",
+	"version": "1.0.0",
+	"author": "Propagandalf",
+	"description": "",
+	"main": "index.js",
+	"keywords": [
+		"nodejs",
+		"typescript",
+		"backend"
+	],
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"start": "node -r tsconfig-paths/register build/index.js | pino-pretty",
+		"dev": "ts-node-dev -r tsconfig-paths/register src/index.ts | pino-pretty",
+		"pkgup": "yarn upgrade-interactive",
+		"lint": "eslint .",
+		"lint:fix": "yarn lint --fix",
+		"prettier": "prettier --check .",
+		"prettier:fix": "prettier --write .",
+		"docker:build": "docker build -t typescript-template:latest .",
+		"docker:run": "docker run --rm -p 3000:3000 --env-file .env --name typescript-template typescript-template",
+		"docker:dev": "docker compose up && docker compose rm -fsv"
+	},
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"pino": "^6.11.3"
+	},
+	"devDependencies": {
+		"@types/eslint": "^7.2.13",
+		"@types/eslint-plugin-prettier": "^3.1.0",
+		"@types/node": "^15.12.4",
+		"@types/pino": "^6",
+		"@types/prettier": "^2.3.0",
+		"@typescript-eslint/eslint-plugin": "^4.27.0",
+		"@typescript-eslint/parser": "^4.27.0",
+		"eslint": "^7.29.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-import-resolver-typescript": "^2.4.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-promise": "^5.1.0",
+		"eslint-plugin-tsdoc": "^0.2.14",
+		"pino-pretty": "^5.0.2",
+		"prettier": "^2.3.1",
+		"ts-node": "^10.0.0",
+		"ts-node-dev": "^1.1.6",
+		"tsconfig-paths": "^3.9.0",
+		"typescript": "^4.3.4"
+	}
+}

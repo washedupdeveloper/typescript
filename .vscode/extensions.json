@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "mikestead.dotenv",
+    "coenraads.bracket-pair-colorizer-2",
+    "ms-azuretools.vscode-docker",
+    "wix.vscode-import-cost",
+    "gruntfuggly.todo-tree",
+    "redhat.vscode-yaml"
+  ]
+}
